@@ -20,16 +20,26 @@ console.log(a); // 0
 let user = { name: "Вася" };
 let admin = user; // скопировали ссылку
 admin.name = 'Петя'; // поменяли данные через admin
-console.log(user.name); // 'Петя', изменения видны в user
+console.log(user); // 'Петя', изменения видны в user
 
 /*
-   3. Клонирование объектов:
+   3. Изменение объектов:
 */
-let clone = {}; // новый пустой объект
-for (let key in user) {
-  clone[key] = user[key];
+let data = { a : 0 };
+function foo2(data) {
+    // хоть здесь опять же локальная переменная data
+    // но передается уже по ссылке
+    data.a = 10
 }
-// теперь clone - полностью независимая копия
+console.log(data); // 0
+foo2(data);
+console.log(data); // 10
+
+/*
+   4. Клонирование объектов:
+*/
+let clone = Object.assign({}, user);
 clone.name = "Вася"; // поменяли данные в clone
-console.log( user.name ); // по-прежнему "Петя"
+console.log( clone );
+console.log( user ); // по-прежнему "Петя"
 
