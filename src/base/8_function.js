@@ -31,10 +31,9 @@ ask(
 );
 
 /*
-  3. new Function
+  4. new Function
   - создание функций на лету
 */
 let sum3 = new Function('a,b', ' return a+b; ');
-
 let result = sum(1, 2);
 console.log( result ); // 3

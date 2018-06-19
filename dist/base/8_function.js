@@ -34,10 +34,9 @@ function () {
 );
 
 /*
-  3. new Function
+  4. new Function
   - создание функций на лету
 */
 var sum3 = new Function('a,b', ' return a+b; ');
-
 var result = sum(1, 2);
 console.log(result); // 3
