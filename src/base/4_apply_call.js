@@ -3,7 +3,7 @@ function makeArray(arg1, arg2){
 }
 
 /*
-  1. Apply - передача контектса (приоритетнее)
+  1. Apply - подмена контектса (приоритетнее), вызывается сразу
 */
 let car = { year: 2008, model: 'Dodge Bailout' };
 makeArray.apply( car, [ 'one', 'two' ] ); // => [ car, 'one', 'two' ]
