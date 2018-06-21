@@ -8,10 +8,10 @@ arr.push(function() {
 arr[2](); // "a","b",function
 
 /*
-  2. Стрелочные функции теряют контекст
+  2. Стрелочные функции принимают контектс текущего объекта, а не верхнего
 */
 arr.push(() => console.log(this));
-arr[3](); // "a","b",function
+arr[3](); // global/window
 
 
 /*
