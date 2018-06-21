@@ -15,7 +15,7 @@ sayHi('Вася');
   - Вначале LexicalEnvironment ищет внутреннюю переменную с таким именем, далее идет в [[Scope]] (window)
   - [[Scope]] - объект переменных высшего объекта
 */
-var userName = "Вася";
+let userName = "Вася";
 function sayHi2() {
   // sayHi2.[[Scope]] = window
   // sayHi2.[[Scope]].userName = "Вася";
