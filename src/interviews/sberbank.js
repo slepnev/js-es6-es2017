@@ -49,7 +49,11 @@ function duplex(A){
     if(first === last){
       continue;
     }
-    if(arr.every(item => (first <= item) && (last <= item) || (first >= item) && (last >= item))){
+    if(arr.every(item => (first <= item) && (last <= item))){
+      result = arr.length + 1;
+      break;
+    }
+    if(arr.every(item => (first >= item) && (last >= item))){
       result = arr.length + 1;
       break;
     }
