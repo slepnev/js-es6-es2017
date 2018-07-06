@@ -1,20 +1,14 @@
 /*
   1. Композиция - это комбинирование двух или более функции чтобы создать новую функцию
+  * Для функционального программирования существуют спец. библиотеки: Ramda
 */
 
-// Все функции карированы:
-const toSlug = input =>
-  R.map(R.toLowerCase())(
-    R.split(' ')(input)
-  );
-
-
 // Без переменных:
-// const toSlug = input => encodeURIComponent(
-//   input.split(' ')
-//     .map(str => str.toLowerCase())
-//     .join('-')
-// );
+const toSlug = input => encodeURIComponent(
+  input.split(' ')
+    .map(str => str.toLowerCase())
+    .join('-')
+);
 
 // Через переменные:
 // const toSlug = input => {
